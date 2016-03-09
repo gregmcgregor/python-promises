@@ -1,13 +1,14 @@
 # python-promises
 Promises for Python
 
-  ```p = Promise(somefunction).then (rejected=myerror)
+```
+p = Promise(somefunction).then (rejected=myerror)
    p.wait()
  
  for x in range (0,20):
      p.append ( Promise (crunchnumber, somemodel, somestart).then ( multicore=True)
- Promise.wait_all ( p )```
- 
+ Promise.wait_all ( p )
+ ```
 
 
  Promise package for Python 2.7+.  Node has such a wonderful way to handle server side.  With all of the debates
