@@ -1,8 +1,12 @@
 # python-promises
 Promises for Python
 
- ```p = Promise(somefunction).then (multicore=True, rejected=myerror)```
- ```p.wait()```
+ p = Promise(somefunction).then (rejected=myerror)
+ p.wait()
+ 
+ for x in range (0,20):
+     p.append ( Promise (crunchnumber, somemodel, somestart).then ( multicore=True)
+ Promise.wait_all ( p )
  
 
 
