@@ -16,3 +16,15 @@
 .idea/workspace.xml
 
 python-promises.iml
+
+.idea/uiDesigner.xml
+
+dist/gofast-0.1.tar.gz
+
+dist/gofast-0.2.tar.gz
+
+dist/gofast-0.3.tar.gz
+
+gofast/__init__.pyc
+
+test
