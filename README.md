@@ -1,6 +1,9 @@
 # python-promises
 Promises for Python
 
+ ```p = Promise(somefunction).then (multicore=True, rejected=myerror)
+ p.wait()```
+
 
  Promise package for Python 2.7+.  Node has such a wonderful way to handle server side.  With all of the debates
  on what to do with Python around GIL, I decided to support both GIL via threads and also multicore in the same
