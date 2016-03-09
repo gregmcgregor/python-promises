@@ -10,7 +10,7 @@ This project was made to merge Multic-core processing and threading in python vi
 def somefunction (args):
     print 'hi'
     
-def crunchnumer ( args ):
+def crunchnumber ( args ):
     pi = 3.14
     for x in range ( 0, 1000000):
         pi = pi * pi
