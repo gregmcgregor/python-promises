@@ -7,6 +7,17 @@ This project was made to merge Multic-core processing and threading in python vi
 
 ```python
 
+def somefunction (args):
+    print 'hi'
+    
+def crunchnumer ( args ):
+    pi = 3.14
+    for x in range ( 0, 1000000):
+        pi = pi * pi
+    # Could use args and compute neural nets or cpu intensive work - this was called multicore
+    
+    return pi
+
 # Simple case
 
 p = Promise(somefunction).then (rejected=myerror)
@@ -19,7 +30,7 @@ if p.wait():
 
 # Mixing threads and Multiprocessing ones
 for x in range (0,20):
-     p.append ( Promise (crunchnumber, somemodel, somestart).then ( multicore=True)
+     p.append ( Promise (crunchnumber, somemodel, somestart).then ( multicore=True, resovled=get_computation_result)
 
 for x in range (0,10:
      p.append ( Promise (someiofunction).then ()
