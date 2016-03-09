@@ -1,15 +1,34 @@
 # python-promises
 Promises for Python
 
-```
+This project was made to merge Multic-core processing and threading in python via a node Javascript style promises package.
+
+## Examples
+
+```python
+
+# Simple case
+
 p = Promise(somefunction).then (rejected=myerror)
-p.wait()
- 
+# Executed with no waiting.  myerror is called if there was a problem
+
+# Wait Case
+p = Promise (somefunction).then (resolved=mysuccess)
+if p.wait(): 
+    print 'all completed successfully'
+
+# Mixing threads and Multiprocessing ones
 for x in range (0,20):
      p.append ( Promise (crunchnumber, somemodel, somestart).then ( multicore=True)
+
+for x in range (0,10:
+     p.append ( Promise (someiofunction).then ()
+     
+# Wait for all threads and multi-core promises to finish
 Promise.wait_all ( p )
  ```
 
+## Why ?
 
  Promise package for Python 2.7+.  Node has such a wonderful way to handle server side.  With all of the debates
  on what to do with Python around GIL, I decided to support both GIL via threads and also multicore in the same
