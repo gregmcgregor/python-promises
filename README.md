@@ -1,7 +1,7 @@
 # python-promises
 Promises for Python
 
-This project was made to merge Multic-core processing and threading in python via a node Javascript style promises package.
+This project was made to merge Multic-core processing and threading in python via a node Javascript style promises package.  Having simple power over GIL and multi-core with the beauty of Promises is nice
 
 ## Examples
 
@@ -30,9 +30,9 @@ Promise.wait_all ( p )
 
 ## Why ?
 
- Promise package for Python 2.7+.  Node has such a wonderful way to handle server side.  With all of the debates
+ For Python 2.7+.  Node has such a wonderful way to handle server side.  With all of the debates
  on what to do with Python around GIL, I decided to support both GIL via threads and also multicore in the same
- API structure.
+ API structure.  We are doing data science work and need multi-core there and threads for I/O
 
  Threads version (default) uses GIL and therefore all your data is thread safe.  It just runs.
 
@@ -42,7 +42,4 @@ Promise.wait_all ( p )
 
  For I/O blocking requests, threads keeps it simple as it uses GIL and you don't have to worry about thread locking or safety.  However, for true multicore processing, you can set multicore=true and bypass GIL.  This is fantastic for hard computing tasks and when you need the computing power of the machine.  Same syntax, just a flag.
  
- This is a good useable start!
-
-
- greg@brightappsllc.com - Copyright (c) 2016
+ 
