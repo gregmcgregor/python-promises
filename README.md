@@ -3,9 +3,14 @@ Promises for Python
 
 This project was made to merge Multic-core processing and threading in python via a node Javascript style promises package.  Having simple power over GIL and multi-core with the beauty of Promises is nice
 
+## Install
+pip install gofast
+
 ## Examples
 
 ```python
+
+import gofast.promise as Q
 
 def somefunction (args):
     print 'hi'
@@ -20,11 +25,11 @@ def crunchnumber ( args ):
 
 # Simple case
 
-p = Promise(somefunction).then (rejected=myerror)
+p = Q.Promise(somefunction).then (rejected=myerror)
 # Executed with no waiting.  myerror is called if there was a problem
 
 # Wait Case
-p = Promise (somefunction).then (resolved=mysuccess)
+p = Q.Promise (somefunction).then (resolved=mysuccess)
 if p.wait(): 
     print 'all completed successfully'
 
@@ -36,7 +41,7 @@ for x in range (0,10:
      p.append ( Promise (someiofunction).then ()
      
 # Wait for all threads and multi-core promises to finish
-Promise.wait_all ( p )
+Q.Promise.wait_all ( p )
  ```
 
 ## Why ?
