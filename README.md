@@ -17,6 +17,7 @@ def somefunction (args):
     
 def crunchnumber ( args ):
     pi = 3.14
+    print args[1] # prints random
     for x in range ( 0, 1000000):
         pi = pi * args[0]
     # Could use args and compute neural nets or cpu intensive work - this was called multicore
@@ -35,7 +36,7 @@ if p.wait():
 
 # Mixing threads and Multiprocessing ones
 for x in range (0,20):
-     p.append ( Promise (crunchnumber, 5.4, somestart).then ( multicore=True, resovled=get_computation_result)
+     p.append ( Promise (crunchnumber, 5.4, 'random').then ( multicore=True, resovled=get_computation_result)
 
 for x in range (0,10:
      p.append ( Promise (someiofunction).then ()
