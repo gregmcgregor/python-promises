@@ -1,7 +1,7 @@
 # python-promises
 Promises for Python
 
-This project was made to merge Multic-core processing and threading in python via a node Javascript style promises package.  Having simple power over GIL and multi-core with the beauty of Promises is nice
+This project was made to merge Multicore processing and threading in python via a node Javascript style promises package.  Having simple power over GIL and multi-core with the beauty of Promises is nice
 
 ## Install
 pip install gofast
