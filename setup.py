@@ -7,7 +7,7 @@ from distutils.core import setup
 setup(
         name = 'gofast',
         packages = ['gofast'], # this must be the same as the name above
-        version = '0.3',
+        version = '0.4',
         description = 'A javascript style promises for python that uses multicore and threads combined.  Go Fast',
         author = 'Greg McGregor',
         author_email = 'greg@brightappsllc.com',

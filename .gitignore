@@ -28,3 +28,5 @@ dist/gofast-0.3.tar.gz
 gofast/__init__.pyc
 
 test
+
+*.gz
