@@ -25,7 +25,7 @@ import time
 from multiprocessing import Process, Queue
 import json
 
-version = "0.3"
+version = "0.4"
 
 # Our deferred object that can be held by your main code
 class Deferred(object):
@@ -99,8 +99,11 @@ class Intent(object):
                         result = resolved(self._deferred._result)
 
                     defer.resolve(result)
+
+
             except Exception as ex:
                 defer.reject(ex.message)
+                rejected (self._deferred._result)
 
         Thread(target=task).start()
 
@@ -238,6 +241,7 @@ def mysuccess (result):
 def sleep (args):
     print 'sleeping ' + str ( args[0])
     time.sleep(args[0])
+    x = 1/0
     raise ValueError ('foo')
 
 
@@ -263,6 +267,9 @@ def mcfail ():
 if __name__ == '__main__':
 
     t = time.clock()
+
+    p = Promise (sleep, 1).then(rejected=myerror)
+    p.wait ()
 
     #Multicore
     p = Promise(mcfail).then (multicore=True, rejected=myerror)
