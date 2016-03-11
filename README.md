@@ -31,7 +31,7 @@ p = Q.Promise(somefunction).then (rejected=myerror)
 
 # Wait Case
 p = Q.Promise (somefunction).then (resolved=mysuccess)
-if p.wait(): 
+if Q.Promise.wait_all(p): 
     print 'all completed successfully'
 
 # Mixing threads and Multiprocessing ones
