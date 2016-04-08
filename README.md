@@ -38,7 +38,7 @@ if Q.Promise.wait_all(p):
 for x in range (0,20):
      p.append ( Promise (crunchnumber, 5.4, 'random').then ( multicore=True, resovled=get_computation_result)
 
-for x in range (0,10:
+for x in range (0,10):
      p.append ( Promise (someiofunction).then ()
      
 # Wait for all threads and multi-core promises to finish
